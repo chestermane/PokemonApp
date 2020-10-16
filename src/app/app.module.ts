@@ -8,7 +8,6 @@ import { PokemonPanelComponent } from "./components/pokemon-panel/pokemon-panel.
 import { PokemonDetailComponent } from "./components/pokemon-detail/pokemon-detail.component";
 import { PokemonCardComponent } from "./components/pokemon-card/pokemon-card.component";
 import { NavComponent } from "./components/nav/nav.component";
-import { DetailSnapshotComponent } from "./components/detail-snapshot/detail-snapshot.component";
 import { PokemonService } from "./services/pokemon.service";
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { PokemonService } from "./services/pokemon.service";
     PokemonDetailComponent,
     PokemonCardComponent,
     NavComponent,
-    DetailSnapshotComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [PokemonService],
