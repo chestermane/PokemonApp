@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemonArray" class="col col-md-4">
+      <div class="card" style="width: 18rem; margin-bottom: 20px">
+        <img
+          src="{{ pokemon.sprites.front_shiny }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemon.name }}</h5>
+          <p>Stats:</p>
+          <p *ngFor="let stat of pokemon.stats" class="card-text">
+            {{ stat.stat.name }} - {{ stat.base_stat }}
+          </p>
+          <a routerLink="/pokemon/{{ pokemon.id }}" class="btn btn-primary"
+            >learn more</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

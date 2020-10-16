@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     
+        <h1 class="display-3" style="display: inline">
+          {{ pokemon?.name | uppercase }}
+        </h1>
+        <img
+          src="{{ pokemon?.sprites.front_shiny }}"
+          alt="{{ pokemon?.name }}"
+          class="pokemonImage"
+        />
+        <hr class="my-4 alert-danger" />
+        <div class="row m-4 justify-content-center">
+          <div>
+            <p class="lead ml-4">Abilities</p>
+            <ul *ngFor="let abilities of pokemon?.abilities">
+              <li>{{ abilities.ability.name }}</li>
+            </ul>
+          </div>
+          <div>
+            <p class="lead ml-4">Moves</p>
+            <ul *ngFor="let moves of pokemon?.moves">
+              <li>{{ moves.move.name }}</li>
+            </ul>
+          </div>
+          <div>
+            <p class="lead ml-4">Stats</p>
+            <ul *ngFor="let stats of pokemon?.stats">
+              <li>{{ stats.stat.name }} - {{ stats.base_stat }}</li>
+            </ul>
+          </div>
+          <div>
+            <p class="lead ml-4">Type</p>
+            <ul *ngFor="let types of pokemon?.types">
+              <li>{{ types.type.name }}</li>
+            </ul>
+          </div>
+        </div>
+
+        <a routerLink="/" role="button">Back</a>
+
+    </div>
+  </div>
+</div>
