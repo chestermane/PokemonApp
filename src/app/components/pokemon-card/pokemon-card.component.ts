@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { Router } from "@angular/router";
 
 import { PokemonService } from "../../services/pokemon.service";
 
@@ -14,9 +13,8 @@ export class PokemonCardComponent implements OnInit {
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i <= 20; i++) {
       this.pokemonService.getPokemon(i).subscribe((resp) => {
-        console.log(resp);
         this.pokemonArray.push(resp);
       });
     }

@@ -5,17 +5,16 @@
         <img
           src="{{ pokemon.sprites.front_shiny }}"
           class="card-img-top"
-          alt="..."
+          alt="{{ pokemon?.name }} image"
+          routerLink="/pokemon/{{ pokemon.id }}"
         />
         <div class="card-body">
-          <h5 class="card-title">{{ pokemon.name }}</h5>
+          <h5 class="card-title">{{ pokemon.name | titlecase }}</h5>
           <p>Stats:</p>
           <p *ngFor="let stat of pokemon.stats" class="card-text">
             {{ stat.stat.name }} - {{ stat.base_stat }}
           </p>
-          <a routerLink="/pokemon/{{ pokemon.id }}" class="btn btn-primary"
-            >learn more</a
-          >
+          <a routerLink="/pokemon/{{ pokemon.id }}" class="btn">More Details</a>
         </div>
       </div>
     </div>

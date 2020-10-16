@@ -19,7 +19,6 @@ export class PokemonDetailComponent implements OnInit {
     this.id = this.route.snapshot.params["id"];
     this.pokemonService.getPokemon(this.id).subscribe((pokemon) => {
       this.pokemon = pokemon;
-      console.log(pokemon);
     });
   }
 }
