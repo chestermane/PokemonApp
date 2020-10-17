@@ -1,18 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class='d-flex flex-row justify-content-between align-items-center'>
-      <h1 class="display-3 p-2 pokemonName" >
-        {{ pokemon?.name | uppercase }}
-      </h1>
-      <img
-        src="{{ pokemon?.sprites.front_shiny }}"
-        alt="{{ pokemon?.name }}"
-        class="pokemonImage p-2"
-      />
-    </div>
-      <hr/>
-      <div class="d-flex flex-row  row m-5 justify-content-around">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <h1 class="display-3 p-2 pokemonName">
+          {{ pokemon?.name | uppercase }}
+        </h1>
+        <img
+          src="{{ pokemon?.sprites.front_shiny }}"
+          alt="{{ pokemon?.name }}"
+          class="pokemonImage p-2"
+        />
+      </div>
+      <hr />
+      <div class="d-flex flex-row row m-5 justify-content-around">
         <div>
           <p class="lead ml-4 p-2">Abilities</p>
           <ul *ngFor="let abilities of pokemon?.abilities">

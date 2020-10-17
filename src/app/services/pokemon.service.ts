@@ -13,7 +13,7 @@ export class PokemonService {
   getPokemon(i): Observable<Pokemon> {
     let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     return this.httpClient.get<Pokemon>(url).pipe(
-      map((res) => {
+      map((res: Pokemon) => {
         return res as Pokemon;
       })
     );
